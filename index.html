@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anoop Mishra - CS + Math @ MSU</title>
+    <meta name="description" content="Portfolio of Anoop Mishra - Full-stack developer, AI/ML engineer, and systems programmer specializing in 5G security and LLM applications.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Anoop Mishra</h1>
+                <p class="hero-subtitle">CS + Math @ Michigan State University</p>
+                <p class="hero-description">
+                    Building systems-y things at the intersection of 5G/RAN security, 
+                    LLM applications, and full-stack development. I ship small utilities 
+                    and explore the boundaries of what's possible with AI and low-level systems.
+                </p>
+                <div class="hero-links">
+                    <a href="https://github.com/Anoop130" target="_blank" class="btn btn-primary">GitHub</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <!-- Active Projects -->
+            <div class="project-category">
+                <h3 class="category-title">Active Development</h3>
+                
+                <article class="project-card featured">
+                    <div class="project-header">
+                        <h4 class="project-title">KaamChalau - AI Resume Optimizer</h4>
+                        <span class="project-badge badge-active">Updated 1 hour ago</span>
+                    </div>
+                    <p class="project-description">
+                        An AI-powered resume optimization tool that tailors your resume for specific job descriptions. 
+                        Features multiple AI models (Groq Llama 3.3 70B, Claude), real-time PDF preview with zoom controls, 
+                        and professional LaTeX generation.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Groq</span>
+                        <span class="tech-tag">Claude</span>
+                        <span class="tech-tag">LaTeX</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/kaamchalau" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card featured">
+                    <div class="project-header">
+                        <h4 class="project-title">ShellPilot - Semantic Shell Assistant</h4>
+                        <span class="project-badge badge-active">Updated 5 days ago</span>
+                    </div>
+                    <p class="project-description">
+                        A C++ semantic shell assistant with local LLM inference using llama.cpp. Features HNSW vector search 
+                        for command retrieval, thread pool implementation, and a modern FTXUI terminal interface. 
+                        Zero external API calls - everything runs locally.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">llama.cpp</span>
+                        <span class="tech-tag">HNSW</span>
+                        <span class="tech-tag">FTXUI</span>
+                        <span class="tech-tag">CMake</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/shellpilot" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h4 class="project-title">AI Tracker - Intelligent Meal & Activity Logger</h4>
+                        <span class="project-badge badge-active">Updated 6 days ago</span>
+                    </div>
+                    <p class="project-description">
+                        Full-stack meal and activity tracking application with AI-powered insights. Built with FastAPI backend, 
+                        React TypeScript frontend, and real-time chart updates using Recharts. Features OAuth2 authentication 
+                        and SQLite persistence.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Recharts</span>
+                        <span class="tech-tag">OAuth2</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/ai_tracker" target="_blank" class="project-link">View on GitHub →</a>
+                        <span class="project-note">Check 'ai' branch for latest features</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h4 class="project-title">WakaPanel - GNOME Shell Extension</h4>
+                        <span class="project-badge badge-active">Updated 5 days ago</span>
+                    </div>
+                    <p class="project-description">
+                        A minimalist GNOME Shell extension that displays WakaTime coding statistics directly in your top panel. 
+                        Shows real-time stats including today's total coding time, top project, and top language with configurable 
+                        refresh intervals.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">GNOME Shell</span>
+                        <span class="tech-tag">WakaTime API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/wakapanel" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Research & Security -->
+            <div class="project-category">
+                <h3 class="category-title">Research & 5G Security</h3>
+                
+                <article class="project-card">
+                    <div class="project-header">
+                        <h4 class="project-title">Analyzer - RAG-Based RAN Testing Tool</h4>
+                        <span class="project-badge badge-stable">Production Ready</span>
+                    </div>
+                    <p class="project-description">
+                        An intelligent analysis tool for RAN testing results that uses LLMs and semantic search to answer questions 
+                        about test outputs. Features FAISS vector database, sentence-transformers for embeddings, and support for 
+                        multiple LLM providers. Fully Dockerized.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">Transformers</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">RAG</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/analyzer" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h4 class="project-title">5G Helpers - Network Security Tools</h4>
+                        <span class="project-badge badge-research">Research</span>
+                    </div>
+                    <p class="project-description">
+                        Helper programs for 5G fronthaul work including DPDK packet capture, log parsing, and automated testing. 
+                        Features LLM-based auto-tuner agent for network optimization and Docker-based deployment for Open Fronthaul.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">DPDK</span>
+                        <span class="tech-tag">Shell</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/5g_helpers" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- AI/ML Projects -->
+            <div class="project-category">
+                <h3 class="category-title">AI & Machine Learning</h3>
+                
+                <article class="project-card">
+                    <div class="project-header">
+                        <h4 class="project-title">RL Agent - Reinforcement Learning with LLMs</h4>
+                        <span class="project-badge badge-active">Active</span>
+                    </div>
+                    <p class="project-description">
+                        Reinforcement learning agent enhanced with large language models. Built with PyTorch and Transformers, 
+                        featuring simulation environments and LLM-guided policy learning.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Transformers</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/rl_agent" target="_blank" class="project-link">View on GitHub →</a>
+                        <span class="project-note">Check 'llm' branch - 22 commits</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h4 class="project-title">Resume Bias Checker - NLP Analysis</h4>
+                        <span class="project-badge badge-stable">Complete</span>
+                    </div>
+                    <p class="project-description">
+                        Resume bias detection using advanced NLP techniques. Processes PDF/DOCX files with spaCy and NLTK, 
+                        featuring OpenAI integration for bias analysis across 450+ sample resumes.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">spaCy</span>
+                        <span class="tech-tag">NLTK</span>
+                        <span class="tech-tag">OpenAI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/resume-bias-checker" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h4 class="project-title">CLI DeepSeek - Terminal LLM Interface</h4>
+                        <span class="project-badge badge-active">Updated 8 days ago</span>
+                    </div>
+                    <p class="project-description">
+                        Command-line interface for DeepSeek LLM with local model inference. Features clean terminal UI 
+                        and configurable model parameters via YAML.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Transformers</span>
+                        <span class="tech-tag">PyTorch</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/cli_deepseek" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Full-Stack Applications -->
+            <div class="project-category">
+                <h3 class="category-title">Full-Stack Web Applications</h3>
+                
+                <article class="project-card">
+                    <div class="project-header">
+                        <h4 class="project-title">Synq - Multi-Platform Data Collector</h4>
+                        <span class="project-badge badge-active">Active</span>
+                    </div>
+                    <p class="project-description">
+                        Data collection and synchronization platform with C++ collectors for laptop and Android, 
+                        Flask aggregator server, and real-time dashboard visualization.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/synq" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h4 class="project-title">Tracker - Task Manager with LLM Chat</h4>
+                        <span class="project-badge badge-stable">Complete</span>
+                    </div>
+                    <p class="project-description">
+                        Task tracking application with integrated LLM chat interface. FastAPI backend with OAuth2 authentication, 
+                        React frontend, and OpenAI-powered chat assistance.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/tracker" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h4 class="project-title">eCommerce Platform</h4>
+                        <span class="project-badge badge-collab">Collaborative</span>
+                    </div>
+                    <p class="project-description">
+                        Python-based e-commerce system with cart management, inventory tracking, and user authentication. 
+                        Features 11 collaborative branches with multiple contributors.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">Flask</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/eCommerce" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Systems Programming -->
+            <div class="project-category">
+                <h3 class="category-title">Systems Programming</h3>
+                
+                <article class="project-card">
+                    <div class="project-header">
+                        <h4 class="project-title">Operating Systems - Complete Implementation</h4>
+                        <span class="project-badge badge-academic">Academic</span>
+                    </div>
+                    <p class="project-description">
+                        Comprehensive OS coursework covering 11 labs: process management, CPU scheduling, memory management, 
+                        paging, multi-threading, and filesystem implementation. All in C/C++ with CMake build system.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">CMake</span>
+                        <span class="tech-tag">OS Internals</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/operating_system" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h4 class="project-title">Systems Programming Projects</h4>
+                        <span class="project-badge badge-academic">Academic</span>
+                    </div>
+                    <p class="project-description">
+                        Collection of systems programming projects in C/C++: signals, fork/exec, pipes, FIFO, 
+                        shared memory, semaphores, and IPC mechanisms. Practical implementations of Unix system calls.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">IPC</span>
+                        <span class="tech-tag">POSIX</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anoop130/Systems-Programming" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">Tech Stack & Expertise</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Shell</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Backend</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">SQLAlchemy</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Frontend</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vite</span>
+                        <span class="skill-tag">TailwindCSS</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4 class="skill-category-title">AI/ML</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">FAISS</span>
+                        <span class="skill-tag">spaCy</span>
+                        <span class="skill-tag">NLTK</span>
+                        <span class="skill-tag">RAG</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4 class="skill-category-title">LLM Platforms</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Groq</span>
+                        <span class="skill-tag">Claude</span>
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">DeepSeek</span>
+                        <span class="skill-tag">llama.cpp</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Databases</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Prisma</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4 class="skill-category-title">DevOps & Tools</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CMake</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Specializations</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">5G/RAN Security</span>
+                        <span class="skill-tag">Systems Programming</span>
+                        <span class="skill-tag">Network Programming</span>
+                        <span class="skill-tag">Vector Search</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2026 Anoop Mishra. Built with HTML, CSS, and ❤️</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Anoop130" target="_blank" class="footer-link">GitHub</a>
+                    <a href="#projects" class="footer-link">Projects</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
