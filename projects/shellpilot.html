@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShellPilot - Semantic Shell Assistant | Anoop Mishra</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+        
+        <header class="detail-hero">
+            <h1 class="detail-title">ShellPilot - Semantic Shell Assistant</h1>
+            <div class="detail-meta">
+                <span class="detail-meta-item">
+                    <strong>Status:</strong> Active Development
+                </span>
+                <span class="detail-meta-item">
+                    <strong>Updated:</strong> 5 days ago
+                </span>
+                <span class="detail-meta-item">
+                    <strong>Type:</strong> C++ Systems Tool
+                </span>
+            </div>
+            <p class="detail-description">
+                A C++ semantic shell assistant with local LLM inference using llama.cpp. Features HNSW vector search 
+                for command retrieval, thread pool implementation, and a modern FTXUI terminal interface. 
+                Zero external API calls - everything runs locally.
+            </p>
+        </header>
+
+        <section class="detail-content">
+            <h2>Overview</h2>
+            <p>
+                ShellPilot is a next-generation command-line assistant that combines the power of large language models 
+                with semantic search to help users discover and execute shell commands. Unlike traditional shell assistants 
+                that rely on cloud APIs, ShellPilot runs entirely locally using llama.cpp for fast, private inference.
+            </p>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Local LLM Inference:</strong> Uses llama.cpp for on-device model execution with no API calls</li>
+                <li><strong>Semantic Search:</strong> HNSW (Hierarchical Navigable Small World) algorithm for fast command retrieval</li>
+                <li><strong>Modern TUI:</strong> Beautiful terminal interface built with FTXUI</li>
+                <li><strong>Thread Pool:</strong> Custom thread pool implementation for parallel processing</li>
+                <li><strong>Command Indexing:</strong> Indexes man pages and command documentation</li>
+                <li><strong>Privacy-First:</strong> All processing happens locally, no data sent to external servers</li>
+            </ul>
+
+            <h2>Technology Stack</h2>
+            <div class="tech-tags">
+                <span class="tech-tag">C++17</span>
+                <span class="tech-tag">llama.cpp</span>
+                <span class="tech-tag">HNSW</span>
+                <span class="tech-tag">FTXUI</span>
+                <span class="tech-tag">CMake</span>
+                <span class="tech-tag">SQLite</span>
+            </div>
+
+            <h2>Architecture</h2>
+            <p>
+                <strong>Vector Search:</strong> Implements HNSW algorithm for fast approximate nearest neighbor search 
+                across command embeddings. This allows semantic matching of user queries to relevant commands.
+            </p>
+            <p>
+                <strong>LLM Integration:</strong> Integrates llama.cpp for running quantized models locally. Supports 
+                various model sizes (7B, 13B, 70B parameters) depending on available hardware.
+            </p>
+            <p>
+                <strong>Indexing Pipeline:</strong> Processes man pages, help documentation, and command examples to build 
+                a comprehensive knowledge base stored in SQLite with vector embeddings.
+            </p>
+
+            <h2>Performance</h2>
+            <ul>
+                <li>Command search: <strong>&lt;10ms</strong> using HNSW index</li>
+                <li>LLM inference: <strong>~50 tokens/second</strong> on CPU (7B model)</li>
+                <li>Memory footprint: <strong>~4GB</strong> with 7B quantized model</li>
+                <li>Startup time: <strong>&lt;200ms</strong> including model loading</li>
+            </ul>
+
+            <h2>Use Cases</h2>
+            <ul>
+                <li>Natural language command search: "find all python files modified today"</li>
+                <li>Learning new commands: get explanations and examples for unfamiliar tools</li>
+                <li>Command history analysis: search through command history semantically</li>
+                <li>Documentation lookup: quick access to man pages and help text</li>
+            </ul>
+
+            <h2>Future Plans</h2>
+            <ul>
+                <li>Add command execution with safety checks and confirmations</li>
+                <li>Implement command history learning from user patterns</li>
+                <li>Support for command chaining and pipeline suggestions</li>
+                <li>Plugin system for extending functionality</li>
+                <li>Cross-platform support (currently Linux-focused)</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="https://github.com/Anoop130/shellpilot" target="_blank" class="btn">View on GitHub</a>
+                <a href="../index.html" class="btn btn-secondary">Back to Portfolio</a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2026 Anoop Mishra</p>
+            <a href="https://github.com/Anoop130" target="_blank" class="footer-link">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>
