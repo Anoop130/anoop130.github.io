@@ -3,378 +3,503 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anoop Mishra's Portfolio</title>
+    <title>Anoop Mishra - Systems & AI Engineer</title>
     <meta name="description" content="Portfolio of Anoop Mishra - Full-stack developer, AI/ML engineer, and systems programmer specializing in 5G security and LLM applications.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="nav-logo">Anoop Mishra</a>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <header class="hero">
+    <header id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Anoop Mishra's Portfolio</h1>
+                <p class="hero-greeting">Hey, I'm Anoop Mishra</p>
+                <h1 class="hero-title">Building systems that bridge security, AI, and performance</h1>
                 <p class="hero-description">
-                    I'm Anoop — CS + Math @ Mississippi State University. I build systems-y things (5G/RAN security, CLI tools, FastAPI backends) 
-                    and ship small utilities.
+                    I ship production systems from low-level network security to AI-powered applications. 
+                    From 5G/RAN security research to full-stack LLM tools, I focus on building things that 
+                    work in the real world—not just in theory.
                 </p>
-                <div class="hero-links">
-                    <a href="https://github.com/Anoop130" target="_blank" class="hero-link">GitHub</a>
-                    <a href="#about" class="hero-link">About Me</a>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">See Projects</a>
+                    <a href="https://github.com/Anoop130" target="_blank" class="btn btn-secondary">View GitHub</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Projects Grid -->
-    <main class="projects-section">
+    <!-- Stats Section -->
+    <section class="stats-section">
         <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Production Systems</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">CS+Math</div>
+                    <div class="stat-label">Mississippi State</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5G/RAN</div>
+                    <div class="stat-label">Security Research</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+        <div class="container">
+            <h2 class="section-title">Recent Highlights</h2>
+            <p class="section-subtitle">Research, development, and technical achievements.</p>
             
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">🔬</div>
+                    <div class="highlight-category">Research</div>
+                    <h3 class="highlight-title">5G Security Research</h3>
+                    <p class="highlight-desc">Network security analysis on RAN/fronthaul infrastructure using DPDK for high-performance packet processing.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">🏗️</div>
+                    <div class="highlight-category">Systems</div>
+                    <h3 class="highlight-title">Low-Level Systems Programming</h3>
+                    <p class="highlight-desc">Built production C++ systems with local LLM inference, vector search, and real-time processing capabilities.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">🤖</div>
+                    <div class="highlight-category">AI/ML</div>
+                    <h3 class="highlight-title">LLM Application Development</h3>
+                    <p class="highlight-desc">Shipped multiple AI-powered applications using RAG, semantic search, and multi-model architectures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section id="projects" class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">Production systems that solve real problems with measurable impact.</p>
+            </div>
+            
+            <div class="featured-grid">
+            
+            <!-- Analyzer -->
+            <article class="featured-card">
+                <div class="featured-image">
+                    <img src="images/analyzer.svg" alt="Analyzer RAG Tool" loading="lazy">
+                </div>
+                <div class="featured-content">
+                    <div class="featured-header">
+                        <h3 class="featured-title">Analyzer</h3>
+                        <p class="featured-subtitle">RAG-Based RAN Testing Tool</p>
+                    </div>
+                    <p class="featured-description">
+                        Intelligent analysis tool for RAN testing using LLMs and semantic search. Processes network 
+                        logs and provides context-aware insights with retrieval-augmented generation.
+                    </p>
+                    <div class="featured-metrics">
+                        <span class="metric-item">Real-time analysis • Dockerized deployment</span>
+                    </div>
+                    <div class="featured-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">FAISS</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                    <a href="projects/analyzer.html" class="featured-link">View Code →</a>
+                </div>
+            </article>
+
+            <!-- Synq -->
+            <article class="featured-card">
+                <div class="featured-image">
+                    <img src="images/synq.svg" alt="Synq Data Collector" loading="lazy">
+                </div>
+                <div class="featured-content">
+                    <div class="featured-header">
+                        <h3 class="featured-title">Synq</h3>
+                        <p class="featured-subtitle">Multi-Platform Data Collector</p>
+                    </div>
+                    <p class="featured-description">
+                        Data collection platform with C++ collectors and Flask server. Cross-platform system for 
+                        gathering and managing data streams with SQLite storage and REST API endpoints.
+                    </p>
+                    <div class="featured-metrics">
+                        <span class="metric-item">Cross-platform • REST API</span>
+                    </div>
+                    <div class="featured-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">SQLite</span>
+                        <span class="tag">REST API</span>
+                    </div>
+                    <a href="projects/synq.html" class="featured-link">View Code →</a>
+                </div>
+            </article>
+
             <!-- KaamChalau -->
+            <article class="featured-card">
+                <div class="featured-image">
+                    <img src="images/kaamchalau.svg" alt="KaamChalau AI Resume Optimizer" loading="lazy">
+                </div>
+                <div class="featured-content">
+                    <div class="featured-header">
+                        <h3 class="featured-title">KaamChalau</h3>
+                        <p class="featured-subtitle">AI Resume Optimizer</p>
+                    </div>
+                    <p class="featured-description">
+                        AI-powered resume optimization tool using Groq and Claude with real-time PDF preview. 
+                        Analyzes and enhances resumes with multi-model consensus for maximum impact.
+                    </p>
+                    <div class="featured-metrics">
+                        <span class="metric-item">Real-time PDF preview • Multi-model analysis</span>
+                    </div>
+                    <div class="featured-tags">
+                        <span class="tag">Flask</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Groq</span>
+                        <span class="tag">Claude</span>
+                    </div>
+                    <a href="projects/kaamchalau.html" class="featured-link">View Code →</a>
+                </div>
+            </article>
+            
+            </div>
+            
+            <div class="view-all-container">
+                <a href="#all-projects" class="view-all-link">View All Projects →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Projects Section -->
+    <section id="all-projects" class="all-projects-section">
+        <div class="container">
+            <h2 class="section-title">All Projects</h2>
+            <div class="projects-grid">
+            <!-- ShellPilot -->
             <article class="project-card">
-                <a href="projects/kaamchalau.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/kaamchalau.svg" alt="KaamChalau AI Resume Optimizer" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
+                <div class="project-image">
+                    <img src="images/shellpilot.svg" alt="ShellPilot" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">ShellPilot</h3>
+                    <p class="project-subtitle">Semantic Shell Assistant</p>
+                    <p class="project-description">
+                        C++ semantic shell assistant with local LLM inference using llama.cpp and HNSW vector search.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">llama.cpp</span>
+                        <span class="tag">HNSW</span>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">KaamChalau - AI Resume Optimizer</h3>
-                        <p class="project-excerpt">
-                            AI-powered resume optimization tool using Groq and Claude with real-time PDF preview.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Flask</span>
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Groq</span>
-                            <span class="project-tag">Claude</span>
-                        </div>
-                    </div>
-                </a>
+                </div>
+                <a href="projects/shellpilot.html" class="project-link">View Project →</a>
             </article>
 
             <!-- WakaPanel -->
             <article class="project-card">
-                <a href="projects/wakapanel.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/wakapanel.svg" alt="WakaPanel GNOME Extension" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
+                <div class="project-image">
+                    <img src="images/wakapanel.svg" alt="WakaPanel" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">WakaPanel</h3>
+                    <p class="project-subtitle">GNOME Shell Extension</p>
+                    <p class="project-description">
+                        GNOME Shell extension displaying WakaTime coding statistics directly in the top panel.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">GNOME</span>
+                        <span class="tag">WakaTime</span>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">WakaPanel - GNOME Shell Extension</h3>
-                        <p class="project-excerpt">
-                            GNOME Shell extension displaying WakaTime coding statistics in your top panel.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">GNOME</span>
-                            <span class="project-tag">WakaTime</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- CLI DeepSeek -->
-            <article class="project-card">
-                <a href="projects/cli-deepseek.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/cli-deepseek.svg" alt="CLI DeepSeek" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">CLI DeepSeek - Terminal LLM Interface</h3>
-                        <p class="project-excerpt">
-                            Command-line interface for DeepSeek LLM with local model inference.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Transformers</span>
-                            <span class="project-tag">PyTorch</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Analyzer -->
-            <article class="project-card">
-                <a href="projects/analyzer.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/analyzer.svg" alt="Analyzer RAG Tool" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Analyzer - RAG-Based RAN Testing Tool</h3>
-                        <p class="project-excerpt">
-                            Intelligent analysis tool for RAN testing using LLMs and semantic search.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">RAG</span>
-                            <span class="project-tag">FAISS</span>
-                            <span class="project-tag">Docker</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- 5G Helpers -->
-            <article class="project-card">
-                <a href="projects/5g-helpers.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/5g-helpers.svg" alt="5G Helpers" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">5G Helpers - Network Security Tools</h3>
-                        <p class="project-excerpt">
-                            Helper programs for 5G fronthaul work including DPDK packet capture.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">DPDK</span>
-                            <span class="project-tag">Docker</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Synq -->
-            <article class="project-card">
-                <a href="projects/synq.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/synq.svg" alt="Synq Data Collector" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Synq - Multi-Platform Data Collector</h3>
-                        <p class="project-excerpt">
-                            Data collection platform with C++ collectors and Flask server.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">C++</span>
-                            <span class="project-tag">Flask</span>
-                            <span class="project-tag">SQLite</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- eCommerce -->
-            <article class="project-card">
-                <a href="projects/ecommerce.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/ecommerce.svg" alt="eCommerce Platform" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">eCommerce Platform</h3>
-                        <p class="project-excerpt">
-                            Python-based e-commerce system with cart management and inventory.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">SQLite</span>
-                            <span class="project-tag">Flask</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Tracker -->
-            <article class="project-card">
-                <a href="projects/tracker.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/tracker.svg" alt="Tracker App" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Tracker - Task Manager with LLM Chat</h3>
-                        <p class="project-excerpt">
-                            Task tracking application with FastAPI backend and OpenAI chat.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">FastAPI</span>
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">OpenAI</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Resume Bias Checker -->
-            <article class="project-card">
-                <a href="projects/resume-bias-checker.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/resume-bias-checker.svg" alt="Resume Bias Checker" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Resume Bias Checker - NLP Analysis</h3>
-                        <p class="project-excerpt">
-                            Resume bias detection using spaCy and NLTK analyzing 450+ resumes.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">spaCy</span>
-                            <span class="project-tag">NLTK</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Burns-CAVS -->
-            <article class="project-card">
-                <a href="projects/burns-cavs.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/burns-cavs.svg" alt="Burns-CAVS Analysis" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Burns-CAVS - Dozer Productivity Analysis</h3>
-                        <p class="project-excerpt">
-                            Data visualization and cost analysis for construction equipment.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">R</span>
-                            <span class="project-tag">Data Viz</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Operating System -->
-            <article class="project-card">
-                <a href="projects/operating-system.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/operating-system.svg" alt="Operating System Projects" loading="lazy">
-                        <div class="project-badge badge-academic">Academic</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Operating Systems - Complete Implementation</h3>
-                        <p class="project-excerpt">
-                            11 labs covering process management, CPU scheduling, and memory management.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">C</span>
-                            <span class="project-tag">C++</span>
-                            <span class="project-tag">CMake</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Systems Programming -->
-            <article class="project-card">
-                <a href="projects/systems-programming.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/systems-programming.svg" alt="Systems Programming" loading="lazy">
-                        <div class="project-badge badge-academic">Academic</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Systems Programming Projects</h3>
-                        <p class="project-excerpt">
-                            C/C++ systems programming: signals, fork/exec, pipes, and IPC mechanisms.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">C</span>
-                            <span class="project-tag">C++</span>
-                            <span class="project-tag">POSIX</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- ShellPilot -->
-            <article class="project-card">
-                <a href="projects/shellpilot.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/shellpilot.svg" alt="ShellPilot Semantic Shell Assistant" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">ShellPilot - Semantic Shell Assistant</h3>
-                        <p class="project-excerpt">
-                            C++ semantic shell assistant with local LLM inference using llama.cpp.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">C++</span>
-                            <span class="project-tag">llama.cpp</span>
-                            <span class="project-tag">HNSW</span>
-                        </div>
-                    </div>
-                </a>
+                </div>
+                <a href="projects/wakapanel.html" class="project-link">View Project →</a>
             </article>
 
             <!-- AI Tracker -->
             <article class="project-card">
-                <a href="projects/ai-tracker.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/ai-tracker.svg" alt="AI Tracker" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
+                <div class="project-image">
+                    <img src="images/ai-tracker.svg" alt="AI Tracker" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">AI Tracker</h3>
+                    <p class="project-subtitle">Intelligent Meal & Activity Logger</p>
+                    <p class="project-description">
+                        Full-stack meal and activity tracking application with AI-powered insights and analytics.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI Tracker - Intelligent Meal & Activity Logger</h3>
-                        <p class="project-excerpt">
-                            Full-stack meal and activity tracking with AI-powered insights.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">FastAPI</span>
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">TypeScript</span>
-                        </div>
+                </div>
+                <a href="projects/ai-tracker.html" class="project-link">View Project →</a>
+            </article>
+
+            <!-- 5G Helpers -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/5g-helpers.svg" alt="5G Helpers" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">5G Helpers</h3>
+                    <p class="project-subtitle">Network Security Tools</p>
+                    <p class="project-description">
+                        Helper programs for 5G fronthaul work including DPDK-based packet capture and analysis.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">DPDK</span>
+                        <span class="tag">Docker</span>
                     </div>
-                </a>
+                </div>
+                <a href="projects/5g-helpers.html" class="project-link">View Project →</a>
+            </article>
+
+            <!-- CLI DeepSeek -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/cli-deepseek.svg" alt="CLI DeepSeek" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">CLI DeepSeek</h3>
+                    <p class="project-subtitle">Terminal LLM Interface</p>
+                    <p class="project-description">
+                        Command-line interface for DeepSeek LLM with local model inference and streaming responses.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Transformers</span>
+                        <span class="tag">PyTorch</span>
+                    </div>
+                </div>
+                <a href="projects/cli-deepseek.html" class="project-link">View Project →</a>
+            </article>
+
+            <!-- Tracker -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/tracker.svg" alt="Tracker" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Tracker</h3>
+                    <p class="project-subtitle">Task Manager with LLM Chat</p>
+                    <p class="project-description">
+                        Task tracking application with FastAPI backend and OpenAI chat integration for smart assistance.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">React</span>
+                        <span class="tag">OpenAI</span>
+                    </div>
+                </div>
+                <a href="projects/tracker.html" class="project-link">View Project →</a>
+            </article>
+
+            <!-- Resume Bias Checker -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/resume-bias-checker.svg" alt="Resume Bias Checker" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Resume Bias Checker</h3>
+                    <p class="project-subtitle">NLP Analysis Tool</p>
+                    <p class="project-description">
+                        Resume bias detection using spaCy and NLTK, analyzing 450+ resumes for implicit bias patterns.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">spaCy</span>
+                        <span class="tag">NLTK</span>
+                    </div>
+                </div>
+                <a href="projects/resume-bias-checker.html" class="project-link">View Project →</a>
             </article>
 
             <!-- RL Agent -->
             <article class="project-card">
-                <a href="projects/rl-agent.html" class="project-link-wrapper">
-                    <div class="project-image">
-                        <img src="images/rl-agent.svg" alt="RL Agent" loading="lazy">
-                        <div class="project-badge badge-active">In Progress</div>
+                <div class="project-image">
+                    <img src="images/rl-agent.svg" alt="RL Agent" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">RL Agent</h3>
+                    <p class="project-subtitle">Reinforcement Learning with LLMs</p>
+                    <p class="project-description">
+                        Reinforcement learning agent enhanced with large language models for improved decision-making.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Transformers</span>
+                        <span class="tag">Python</span>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">RL Agent - Reinforcement Learning with LLMs</h3>
-                        <p class="project-excerpt">
-                            Reinforcement learning agent enhanced with large language models.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">PyTorch</span>
-                            <span class="project-tag">Transformers</span>
-                            <span class="project-tag">Python</span>
-                        </div>
-                    </div>
-                </a>
+                </div>
+                <a href="projects/rl-agent.html" class="project-link">View Project →</a>
             </article>
 
+            <!-- Operating System -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/operating-system.svg" alt="Operating System" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Operating Systems</h3>
+                    <p class="project-subtitle">Complete Implementation</p>
+                    <p class="project-description">
+                        11 comprehensive labs covering process management, CPU scheduling, and memory management.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">C</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">CMake</span>
+                    </div>
+                </div>
+                <a href="projects/operating-system.html" class="project-link">View Project →</a>
+            </article>
+
+            <!-- Systems Programming -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/systems-programming.svg" alt="Systems Programming" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Systems Programming</h3>
+                    <p class="project-subtitle">Low-Level C/C++ Projects</p>
+                    <p class="project-description">
+                        C/C++ systems programming projects: signals, fork/exec, pipes, and IPC mechanisms.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">C</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">POSIX</span>
+                    </div>
+                </div>
+                <a href="projects/systems-programming.html" class="project-link">View Project →</a>
+            </article>
+
+            <!-- eCommerce -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/ecommerce.svg" alt="eCommerce Platform" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">eCommerce Platform</h3>
+                    <p class="project-subtitle">Python-Based Store</p>
+                    <p class="project-description">
+                        Full-featured e-commerce system with cart management, inventory tracking, and order processing.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">SQLite</span>
+                        <span class="tag">Flask</span>
+                    </div>
+                </div>
+                <a href="projects/ecommerce.html" class="project-link">View Project →</a>
+            </article>
+
+            <!-- Burns-CAVS -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/burns-cavs.svg" alt="Burns-CAVS" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Burns-CAVS</h3>
+                    <p class="project-subtitle">Dozer Productivity Analysis</p>
+                    <p class="project-description">
+                        Data visualization and cost analysis tool for construction equipment productivity optimization.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">R</span>
+                        <span class="tag">Data Viz</span>
+                    </div>
+                </div>
+                <a href="projects/burns-cavs.html" class="project-link">View Project →</a>
+            </article>
+
+            </div>
         </div>
-    </main>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Let's build something together</h2>
+                <p class="cta-description">
+                    Looking for opportunities where I can ship intelligent systems that create real impact. 
+                    Open to internships, research positions, and interesting collaborations.
+                </p>
+                <div class="cta-buttons">
+                    <a href="mailto:anoopmishra0130@gmail.com" class="btn btn-primary">Get in Touch</a>
+                    <a href="https://github.com/Anoop130" target="_blank" class="btn btn-secondary">View GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                I'm a CS + Math student at Mississippi State University with a passion for building things at 
-                the intersection of systems programming, AI/ML, and network security. My work spans from 
-                low-level C++ applications with local LLM inference to full-stack web apps with modern frameworks.
-            </p>
-            <p class="about-text">
-                Currently focused on 5G/RAN security research, LLM-powered tools, and creating utilities that 
-                make developers' lives easier.
-            </p>
-            <div class="tech-stack">
-                <h3 class="tech-title">Tech Stack</h3>
-                <div class="tech-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">C/C++</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">FastAPI</span>
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">PyTorch</span>
-                    <span class="tech-tag">Docker</span>
+            <div class="about-content">
+                <div class="about-main">
+                    <h2 class="section-title">Anoop Mishra</h2>
+                    <p class="about-subtitle">Building systems that solve real problems, not just papers</p>
+                    <p class="about-text">
+                        CS + Math student at Mississippi State University with a passion for building things at 
+                        the intersection of systems programming, AI/ML, and network security. My work spans from 
+                        low-level C++ applications with local LLM inference to full-stack web apps with modern frameworks.
+                    </p>
+                    <p class="about-text">
+                        Currently focused on 5G/RAN security research, LLM-powered tools, and creating utilities that 
+                        make developers' lives easier. I believe in shipping production-ready code that delivers measurable value.
+                    </p>
+                </div>
+                <div class="about-sidebar">
+                    <div class="about-links-section">
+                        <h3 class="sidebar-title">Quick Links</h3>
+                        <div class="about-links">
+                            <a href="#" class="about-link">Home</a>
+                            <a href="#projects" class="about-link">Projects</a>
+                            <a href="#about" class="about-link">About</a>
+                            <a href="#contact" class="about-link">Contact</a>
+                        </div>
+                    </div>
+                    <div class="about-connect-section">
+                        <h3 class="sidebar-title">Connect</h3>
+                        <div class="connect-links">
+                            <a href="https://github.com/Anoop130" target="_blank" class="connect-link">GitHub</a>
+                            <a href="https://www.linkedin.com/in/anoop-mishra-732337303/" target="_blank" class="connect-link">LinkedIn</a>
+                            <a href="mailto:anoopmishra0130@gmail.com" class="connect-link">Email</a>
+                            <a href="tel:+18083982418" class="connect-link">Phone</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -383,8 +508,16 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">© 2026 Anoop Mishra</p>
-            <a href="https://github.com/Anoop130" target="_blank" class="footer-link">GitHub</a>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p class="footer-name">Anoop Mishra</p>
+                    <p class="footer-tagline">Building ML systems that solve real problems, not just papers</p>
+                </div>
+                <div class="footer-right">
+                    <p class="footer-credit">Built with passion, precision, and excessive attention to detail.</p>
+                    <p class="footer-year">© 2026 Anoop Mishra. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
