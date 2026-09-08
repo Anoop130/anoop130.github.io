@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anoop Mishra · Infrastructure &amp; Systems Engineer</title>
+<meta name="description" content="Anoop Mishra. CS and Math at Mississippi State. Infrastructure engineering, 5G/O-RAN security research, and Linux desktop tools.">
+<meta name="author" content="Anoop Mishra">
+<meta property="og:title" content="Anoop Mishra · Infrastructure &amp; Systems Engineer">
+<meta property="og:description" content="PostgreSQL clusters, rootless Podman, 5G/O-RAN security research, and GNOME Shell extensions.">
+<meta property="og:image" content="images/me.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand"><span class="dot"></span>anoop mishra</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#debate">Debate</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="anoop_mishra.pdf" class="cta" target="_blank" rel="noopener">Résumé</a>
+      <button class="icon-btn" id="theme" aria-label="Toggle colour theme">
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">Mississippi State University · CS + Math '27</p>
+      <h1>I build the layer <em>underneath</em> the thing people see.</h1>
+      <p class="lede">I build database clusters, authorization models, deploy pipelines, packet-level test rigs, and small Linux tools. I run infrastructure for <strong>Playbook</strong> at the Athletics Intelligence Research Laboratory, and I spent a year and a half on <strong>5G/O-RAN security research</strong> in the Wireless Communications Lab.</p>
+      <p class="lede">I also publish two GNOME Shell extensions. More than 200 people run them.</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn solid">See the work</a>
+        <a href="https://github.com/Anoop130" class="btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.8-1.5-3.8-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.4.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/anoopmishra09" class="btn" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <figure class="portrait"><img src="images/me.jpg" alt="Anoop Mishra" width="900" height="1024"></figure>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><b>4.00</b><span>GPA, dual B.S. in CS and Math</span></div>
+    <div class="stat"><b>MILCOM</b><span>Outstanding Demo Award, IEEE</span></div>
+    <div class="stat"><b>4.3M+</b><span>rows in the cluster I run</span></div>
+    <div class="stat"><b>200+</b><span>people running my GNOME extensions</span></div>
+    <div class="stat"><b>9th / 871</b><span>national debate rank, rookie season</span></div>
+  </div>
+</div>
+
+<!-- ============================ TIMELINE ============================ -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01 / WORK</span>
+      <h2>Where I've worked</h2>
+      <p>Most of these ran at the same time as each other. The line shows when each one started; the branches below show what each one actually was.</p>
+    </div>
+
+    <!-- overlap chart -->
+    <figure class="journey">
+      <div class="jr-scroll">
+        <ol class="jr">
+          <span class="jr-year start" style="left:0%">2023</span>
+          <span class="jr-year" style="left:12.5%">2024</span>
+          <span class="jr-year" style="left:25%">2025</span>
+          <span class="jr-year" style="left:62.5%">2026</span>
+
+          <li class="jr-stop up" data-track="debate">
+            <a class="jr-card" href="#debate">
+              <span class="jr-bub" role="img" aria-label="microphone">🎙️</span>
+              <b class="jr-date">Fall 2023</b>
+              <span class="jr-name">IPDA Debate</span>
+              <small class="jr-sub">9th nationally, novice</small>
+            </a>
+            <span class="jr-dot"></span>
+          </li>
+
+          <li class="jr-stop down" data-track="data">
+            <a class="jr-card" href="#w-cavs">
+              <span class="jr-bub" role="img" aria-label="tractor">🚜</span>
+              <b class="jr-date">Nov 2024</b>
+              <span class="jr-name">CAVS</span>
+              <small class="jr-sub">Data Science Assistant</small>
+            </a>
+            <span class="jr-dot"></span>
+          </li>
+
+          <li class="jr-stop up" data-track="research">
+            <a class="jr-card" href="#w-wireless">
+              <span class="jr-bub" role="img" aria-label="satellite antenna">📡</span>
+              <b class="jr-date">Feb 2025</b>
+              <span class="jr-name">Wireless Comms Lab</span>
+              <small class="jr-sub">Research Assistant</small>
+            </a>
+            <span class="jr-dot"></span>
+          </li>
+
+          <li class="jr-stop down" data-track="proj">
+            <a class="jr-card" href="#p-wakapanel">
+              <span class="jr-bub" role="img" aria-label="keyboard">⌨️</span>
+              <b class="jr-date">Nov 2025</b>
+              <span class="jr-name">WakaPanel</span>
+              <small class="jr-sub">First published extension</small>
+            </a>
+            <span class="jr-dot"></span>
+          </li>
+
+          <li class="jr-stop up" data-track="proj">
+            <a class="jr-card" href="#p-synq">
+              <span class="jr-bub" role="img" aria-label="stopwatch">⏱️</span>
+              <b class="jr-date">Dec 2025</b>
+              <span class="jr-name">Synq</span>
+              <small class="jr-sub">Self-hosted tracker</small>
+            </a>
+            <span class="jr-dot"></span>
+          </li>
+
+          <li class="jr-stop down" data-track="fellow">
+            <a class="jr-card" href="#w-truscript">
+              <span class="jr-bub" role="img" aria-label="clipboard">📋</span>
+              <b class="jr-date">Feb 2026</b>
+              <span class="jr-name">AI Hub · TruScript</span>
+              <small class="jr-sub">Fraud detection lead</small>
+            </a>
+            <span class="jr-dot"></span>
+          </li>
+
+          <li class="jr-stop up same" data-track="teach">
+            <a class="jr-card" href="#w-ta">
+              <span class="jr-bub" role="img" aria-label="graduation cap">🎓</span>
+              <b class="jr-date">Feb 2026</b>
+              <span class="jr-name">TA · ExLENT XAI</span>
+              <small class="jr-sub">Same semester as TruScript</small>
+            </a>
+            <span class="jr-dot"></span>
+          </li>
+
+          <li class="jr-stop down" data-track="infra">
+            <a class="jr-card" href="#w-playbook">
+              <span class="jr-bub" role="img" aria-label="elephant">🐘</span>
+              <b class="jr-date">Jun 2026</b>
+              <span class="jr-name">Playbook</span>
+              <small class="jr-sub">Infrastructure intern</small>
+            </a>
+            <span class="jr-dot"></span>
+          </li>
+
+        </ol>
+      </div>
+      <figcaption class="jr-cap">In start date order, with the rail graded by year. These ran in parallel, not in sequence. In spring 2026 five were live at once.</figcaption>
+    </figure>
+
+    <!-- branches -->
+    <ol class="tl">
+
+      <!-- Playbook -->
+      <li class="tl-item" id="w-playbook" data-track="infra">
+        <div class="tl-when"><span>Jun 2026</span><em>now</em></div>
+        <article class="tl-card">
+          <div class="tl-media"><span class="emoji" role="img" aria-label="database">🐘</span></div>
+          <div class="tl-body">
+            <h3>Playbook</h3>
+            <p class="tl-org">Infrastructure Engineer Intern · Athletics Intelligence Research Laboratory</p>
+            <ul class="tl-points">
+              <li>Architected a multi-database PostgreSQL cluster storing <strong>4.3M+ rows for 50+ users</strong>, with 40+ versioned migrations and per-service role isolation</li>
+              <li>Implemented multi-tenant authorization with PostgreSQL Row-Level Security, enforcing <strong>default-deny access across 3 independent scopes</strong></li>
+              <li>Migrated production services to rootless Podman with systemd Quadlets on RHEL 9/SELinux, across 3 VMs and a dedicated GPU workstation</li>
+              <li>Automated 3-environment CI/CD with GitHub Actions and GHCR, sequencing migrations before deployments</li>
+            </ul>
+            <div class="tl-foot">
+              <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">Podman</span><span class="tag">systemd</span><span class="tag">RHEL / SELinux</span><span class="tag">GitHub Actions</span></div>
+              <button class="more-btn" data-item="playbook">Details →</button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- Spring 2026: two at once -->
+      <li class="tl-item tl-cluster" id="w-truscript" data-track="fellow">
+        <div class="tl-when"><span>Feb 2026</span><em>May 2026</em></div>
+        <div class="cluster-wrap">
+          <p class="cluster-label">Two roles, one semester, alongside the research lab</p>
+          <div class="cluster-grid">
+
+            <article class="tl-card" data-track="fellow">
+              <div class="tl-media"><img src="images/truscript-talk.jpg" alt="Presenting the TruScript pipeline" loading="lazy"></div>
+              <div class="tl-body">
+                <h3>TruScript <span class="badge">Presented to MS Board of Nursing</span></h3>
+                <p class="tl-org">AI Hub Fellow · Mississippi ITS AI Innovation Hub · AI Modeling &amp; Fraud Detection Lead</p>
+                <ul class="tl-points">
+                  <li>Delivered a completed proof of concept and <strong>presented findings to the Mississippi Board of Nursing</strong></li>
+                  <li>Designed an AI/ML transcript fraud detection pipeline on AWS using <strong>Textract, Lambda and Bedrock Knowledge Bases</strong></li>
+                  <li>Built Lambda orchestration combining OCR extraction, prompt-based fraud checks, risk scoring and explainable output</li>
+                  <li>Integrated the pipeline with a FastAPI backend via async invocation and S3 document flow</li>
+                </ul>
+                <div class="tl-foot">
+                  <div class="tags"><span class="tag">AWS Textract</span><span class="tag">Bedrock</span><span class="tag">Lambda</span><span class="tag">FastAPI</span></div>
+                  <button class="more-btn" data-item="truscript">Details →</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="tl-card" id="w-ta" data-track="teach">
+              <div class="tl-media"><span class="emoji" role="img" aria-label="graduation cap">🎓</span></div>
+              <div class="tl-body">
+                <h3>Teaching Assistant</h3>
+                <p class="tl-org">NSF ExLENT XAI Project · Mississippi State University</p>
+                <ul class="tl-points">
+                  <li>Graded and validated reference solutions across <strong>NLP and deep learning modules</strong> in an NSF-funded XAI curriculum</li>
+                </ul>
+                <div class="tl-foot">
+                  <div class="tags"><span class="tag">PyTorch</span><span class="tag">HuggingFace</span><span class="tag">Jupyter</span></div>
+                  <button class="more-btn" data-item="ta">Details →</button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </li>
+
+      <!-- Wireless lab: one role, three branches -->
+      <li class="tl-item tl-fork" id="w-wireless" data-track="research">
+        <div class="tl-when"><span>Feb 2025</span><em>Jul 2026</em></div>
+        <div class="fork-wrap">
+          <article class="tl-card tl-card-head">
+            <div class="tl-media"><span class="emoji" role="img" aria-label="satellite antenna">📡</span></div>
+            <div class="tl-body">
+              <h3>Wireless Communications Lab</h3>
+              <p class="tl-org">Undergraduate Research Assistant · Mississippi State University</p>
+              <p class="tl-note">One role, three workstreams.</p>
+            </div>
+          </article>
+
+          <div class="branches">
+
+            <article class="tl-card branch" id="w-fronthaul" data-track="research">
+              <div class="tl-media"><span class="emoji" role="img" aria-label="antenna">🛰️</span></div>
+              <div class="tl-body">
+                <h3>Open Fronthaul security testing <span class="badge">MILCOM Outstanding Demo</span></h3>
+                <p class="tl-org">NSF funded</p>
+                <ul class="tl-points">
+                  <li>Won the <strong>IEEE MILCOM Outstanding Demo Award</strong> for co-authored research on Open Fronthaul protocol security testing</li>
+                  <li>Built an autonomous Bash testing engine with self-recovery, enabling <strong>24/7 attack execution with zero human intervention</strong></li>
+                  <li>Reduced test environment setup time by <strong>75%</strong> via Linux network virtualization, Docker containers and SDR UE emulation</li>
+                  <li>Streamed live logs to InfluxDB and built Grafana dashboards for real-time attack observability</li>
+                </ul>
+                <div class="tl-foot">
+                  <div class="tags"><span class="tag">Bash</span><span class="tag">srsRAN</span><span class="tag">Docker</span><span class="tag">InfluxDB</span><span class="tag">Grafana</span></div>
+                  <button class="more-btn" data-item="fronthaul">Details →</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="tl-card branch" id="w-netauto" data-track="research">
+              <div class="tl-media"><span class="emoji" role="img" aria-label="robot">🤖</span></div>
+              <div class="tl-body">
+                <h3>AI-driven network automation</h3>
+                <p class="tl-org">NTIA funded</p>
+                <ul class="tl-points">
+                  <li>Built a self-healing multi-agent LLM orchestration system, <strong>reducing network configuration complexity by 70%</strong></li>
+                  <li>Engineered a RAG pipeline backed by ChromaDB, <strong>improving O-RAN spec retrieval accuracy by 60%</strong></li>
+                  <li>Benchmarked 5 open-source LLMs on custom efficiency metrics, surfacing a <strong>6x performance gap</strong></li>
+                </ul>
+                <div class="tl-foot">
+                  <div class="tags"><span class="tag">LangChain</span><span class="tag">HuggingFace</span><span class="tag">ChromaDB</span><span class="tag">RAG</span></div>
+                  <button class="more-btn" data-item="netauto">Details →</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="tl-card branch" id="w-autosec" data-track="research">
+              <div class="tl-media"><span class="emoji" role="img" aria-label="shield">🛡️</span></div>
+              <div class="tl-body">
+                <h3>AutoSec-RAN</h3>
+                <p class="tl-org">5G / O-RAN security fine-tuning</p>
+                <ul class="tl-points">
+                  <li>Designed a multi-step data generation system producing <strong>4.8K+ security Q&amp;A examples</strong> with validation passes for factual grounding</li>
+                  <li>Fine-tuned instruction-following LLMs with <strong>LoRA/PEFT on an A100 GPU</strong> using mixed precision and checkpointing</li>
+                  <li>Evaluated <strong>168 security scenarios</strong>, identifying <strong>243 high/critical findings</strong></li>
+                </ul>
+                <div class="tl-foot">
+                  <div class="tags"><span class="tag">PyTorch</span><span class="tag">LoRA / PEFT</span><span class="tag">A100</span></div>
+                  <button class="more-btn" data-item="autosec">Details →</button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </li>
+
+      <!-- CAVS -->
+      <li class="tl-item" id="w-cavs" data-track="data">
+        <div class="tl-when"><span>Nov 2024</span><em>Jul 2025</em></div>
+        <article class="tl-card">
+          <div class="tl-media"><span class="emoji" role="img" aria-label="tractor">🚜</span></div>
+          <div class="tl-body">
+            <h3>Data Science Assistant</h3>
+            <p class="tl-org">Data Science Assistant · Center for Advanced Vehicular Systems (CAVS)</p>
+            <ul class="tl-points">
+              <li>Optimized construction resource allocation across multiple sites using <strong>mathematical models based on hardware constraints</strong></li>
+            </ul>
+            <div class="tl-foot">
+              <div class="tags"><span class="tag">Python</span><span class="tag">Mathematical modelling</span></div>
+              <button class="more-btn" data-item="cavs">Details →</button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+<!-- ============================ PROJECTS ============================ -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">02 / PROJECTS</span>
+      <h2>Things I built because I wanted them</h2>
+      <p>Synq is the tracker. Synq for GNOME is the desktop extension that feeds it. WakaPanel is separate, and the one most people found first.</p>
+    </div>
+
+    <div class="proj-grid">
+
+      <article class="tl-card proj" id="p-synq" data-track="proj">
+        <div class="tl-media"><img src="images/synq-architecture.png" alt="Synq system architecture diagram" loading="lazy"></div>
+        <div class="tl-body">
+          <h3>Synq <span class="when">Dec 2025 to now</span></h3>
+          <p class="tl-org">Cloud-native systems tracker · C++, Python, PostgreSQL</p>
+          <ul class="tl-points">
+            <li>C++ agent at <strong>0.3% CPU and 15 MB RSS</strong></li>
+            <li>Flask on Render, PostgreSQL on Supabase, Docker for local dev</li>
+            <li>Event-driven over D-Bus, so durations are measured rather than sampled</li>
+          </ul>
+          <div class="tl-foot">
+            <div class="tags"><span class="tag">C++</span><span class="tag">Flask</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></div>
+            <button class="more-btn" data-item="synq">Details →</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tl-card proj" data-track="proj">
+        <div class="tl-media"><img src="images/synq-gnome-panel.png" alt="Synq GNOME Shell extension panel menu" loading="lazy"></div>
+        <div class="tl-body">
+          <h3>Synq for GNOME <span class="badge">Published</span> <span class="when">2026</span></h3>
+          <p class="tl-org">GNOME Shell extension · JavaScript (GJS)</p>
+          <ul class="tl-points">
+            <li>Published to <strong>extensions.gnome.org</strong>, GNOME Shell 45 to 48</li>
+            <li>D-Bus API any Synq collector can subscribe to</li>
+            <li>Fires <code>WindowChanged</code> on focus change, not on a timer</li>
+          </ul>
+          <div class="tl-foot">
+            <div class="tags"><span class="tag">GJS</span><span class="tag">D-Bus</span><span class="tag">GSettings</span></div>
+            <button class="more-btn" data-item="synq-gnome">Details →</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tl-card proj" id="p-wakapanel" data-track="proj">
+        <div class="tl-media"><img src="images/wakapanel-panel.png" alt="WakaPanel in the GNOME top panel" loading="lazy"></div>
+        <div class="tl-body">
+          <h3>WakaPanel <span class="badge">200+ users</span> <span class="when">Nov 2025 to now</span></h3>
+          <p class="tl-org">GNOME Shell extension · JavaScript (GJS), GTK4</p>
+          <ul class="tl-points">
+            <li>WakaTime stats in the GNOME panel, published to e.g.o</li>
+            <li>Iterated on UI/UX from user feedback, growing to <strong>200+ users</strong></li>
+            <li>GTK4 preferences: API key, refresh interval, endpoint</li>
+          </ul>
+          <div class="tl-foot">
+            <div class="tags"><span class="tag">GJS</span><span class="tag">GTK4</span><span class="tag">WakaTime API</span></div>
+            <button class="more-btn" data-item="wakapanel">Details →</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tl-card proj" data-track="proj">
+        <div class="tl-media"><span class="emoji" role="img" aria-label="package">📦</span></div>
+        <div class="tl-body">
+          <h3>Open source repositories <span class="when">2025 to 2026</span></h3>
+          <p class="tl-org">Research tooling, open sourced</p>
+          <ul class="tl-points">
+            <li><strong>ORAN_RAG</strong>: retrieval over O-RAN specification documents</li>
+            <li><strong>5g_helpers</strong>: scripts for setting up 5G test environments</li>
+          </ul>
+          <div class="tl-foot">
+            <div class="tags"><span class="tag">Python</span><span class="tag">ChromaDB</span><span class="tag">FAISS</span><span class="tag">Bash</span></div>
+            <button class="more-btn" data-item="oranrag">Details →</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DEBATE ============================ -->
+<section id="debate" data-track="debate">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">03 / DEBATE</span>
+      <h2>Competitive debate</h2>
+      <p>Two seasons on the Mississippi State debate team, competing in the Novice division in 2023/24 and Junior Varsity in 2024/25. IPDA is individual, extemporaneous and judged by lay judges.</p>
+    </div>
+
+    <div class="rec">
+      <div class="rec-cell">
+        <b>9th <small>of 871</small></b>
+        <span>National rank, rookie season</span>
+        <em>IPDA season-long, 2023/24</em>
+      </div>
+      <div class="rec-cell">
+        <b>Semifinalist</b>
+        <span>2024 IPDA National Championship</span>
+        <em>6th seed of 127 · 4 elim wins</em>
+      </div>
+      <div class="rec-cell">
+        <b>8th <small>of 82</small></b>
+        <span>Junior Varsity speaker award</span>
+        <em>2025 National Championship</em>
+      </div>
+      <div class="rec-cell">
+        <b>#1 <small>on squad</small></b>
+        <span>Top-scoring novice at MSU</span>
+        <em>while MSU ranked #1 of 179</em>
+      </div>
+    </div>
+
+    <div class="rec-foot">
+      <p>First season: 9th of 871 nationally and a semifinal at the national tournament. Second season in Junior Varsity: <strong>17th of 400</strong> and the <strong>8th speaker award</strong> at nationals. Only a school's best three novices count toward the novice squad award, and I was the top scorer of ours.</p>
+      <button class="btn solid" data-item="debate-record">Read the full record</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SKILLS ============================ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">04 / STACK</span>
+      <h2>What I work in</h2>
+    </div>
+    <div class="skills">
+      <div class="skill-block">
+        <h4>Languages</h4>
+        <div class="tags"><span class="tag">C / C++</span><span class="tag">Python</span><span class="tag">JavaScript (GJS)</span><span class="tag">SQL</span><span class="tag">Bash</span><span class="tag">HTML / CSS</span></div>
+      </div>
+      <div class="skill-block">
+        <h4>Infrastructure &amp; DevOps</h4>
+        <div class="tags"><span class="tag">Podman</span><span class="tag">Docker</span><span class="tag">systemd</span><span class="tag">RHEL / SELinux</span><span class="tag">nginx</span><span class="tag">gunicorn</span><span class="tag">GitHub Actions</span><span class="tag">GHCR</span><span class="tag">Git</span><span class="tag">Linux</span></div>
+      </div>
+      <div class="skill-block">
+        <h4>Frameworks &amp; libraries</h4>
+        <div class="tags"><span class="tag">PyTorch</span><span class="tag">HuggingFace</span><span class="tag">LangChain</span><span class="tag">FastAPI</span><span class="tag">Flask</span><span class="tag">GTK4</span><span class="tag">scikit-learn</span><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">ChromaDB</span><span class="tag">FAISS</span></div>
+      </div>
+      <div class="skill-block">
+        <h4>Cloud &amp; databases</h4>
+        <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">InfluxDB</span><span class="tag">Grafana</span><span class="tag">Redis</span><span class="tag">Supabase</span><span class="tag">AWS Lambda</span><span class="tag">S3</span><span class="tag">Textract</span><span class="tag">Bedrock</span><span class="tag">IAM</span></div>
+      </div>
+    </div>
+
+    <div class="edu">
+      <div>
+        <h3>Mississippi State University</h3>
+        <p>B.S. Computer Science · B.S. Mathematics · Graduating May 2027</p>
+        <p class="courses">Operating Systems · Data Structures &amp; Algorithms · Computer Organization · Parallel Algorithms · Data Science · Data Communications &amp; Networks · Machine Learning</p>
+      </div>
+      <div class="edu-gpa">
+        <div class="gpa">4.00 / 4.00</div>
+        <p>cumulative GPA</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">05 / CONTACT</span>
+      <h2>Get in touch</h2>
+      <p>Happy to talk about infrastructure, RAN security, or why your GNOME extension keeps breaking on Wayland.</p>
+    </div>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:am5103@msstate.edu"><span>Email</span><b>am5103@msstate.edu</b></a>
+      <a class="contact-card" href="https://github.com/Anoop130" target="_blank" rel="noopener"><span>GitHub</span><b>github.com/Anoop130</b></a>
+      <a class="contact-card" href="https://linkedin.com/in/anoopmishra09" target="_blank" rel="noopener"><span>LinkedIn</span><b>in/anoopmishra09</b></a>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>© <span id="year">2026</span> Anoop Mishra</span>
+  <span class="mono">Starkville, MS</span>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="detail" id="detail" role="dialog" aria-modal="true" aria-labelledby="detail-title" tabindex="-1">
+  <div class="detail-bar">
+    <span class="kind" id="detail-kind"></span>
+    <button class="close-btn" id="close" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="detail-body" id="detail-body"></div>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>
