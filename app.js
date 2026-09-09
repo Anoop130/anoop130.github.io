@@ -55,6 +55,9 @@ const ITEMS = {
       "Streamed live logs to InfluxDB and built Grafana dashboards for real-time attack observability across test runs."
     ],
     stack: ["Bash", "srsRAN", "Docker", "Linux network virtualization", "SDR / UE emulation", "InfluxDB", "Grafana", "Python"],
+    gallery: [
+      { src: "images/fronthaul-dos.png", alt: "The attack harness console during a denial-of-service replay, logging injection points and per-packet counters from the radio unit", caption: "The harness replaying a denial-of-service attack against the Open Fronthaul interface, with the radio unit's counters logged per packet." }
+    ],
     note: "Lab and collaborator repositories are private. The demo work was published through IEEE MILCOM."
   },
 
@@ -71,6 +74,9 @@ const ITEMS = {
     stack: ["LangChain", "HuggingFace Transformers", "ChromaDB", "FAISS", "RAG", "Python"],
     links: [
       { label: "github.com/Anoop130/ORAN_RAG", href: "https://github.com/Anoop130/ORAN_RAG" }
+    ],
+    gallery: [
+      { src: "images/network-automation.png", alt: "A six-step agent loop: a controller prompts a planner to write a test procedure, a second agent generates the API calls and config, a validator checks the plan, then the executor runs the test against a UE's NAS, RRC, PDCP, RLC, MAC and PHY layers and returns results to analyse", caption: "The controller prompts the planner, config and validation agents; the executor drives the test UE and reports back.", pad: true }
     ]
   },
 
@@ -85,6 +91,9 @@ const ITEMS = {
       "Evaluated <strong>168 security scenarios</strong> from network captures and logs, identifying <strong>243 high/critical findings</strong> across DoS and injection-style attacks."
     ],
     stack: ["PyTorch", "HuggingFace", "LoRA / PEFT", "A100 / mixed precision", "Python"],
+    gallery: [
+      { src: "images/autosec-ran.png", alt: "The AutoSec-RAN pipeline: an offline path curates the specification corpus, builds FAISS stores and generates training pairs to LoRA fine-tune a Mistral-7B adapter; at inference, RAG retrieval and that adapter answer an investigator's question and a judge model scores the result", caption: "Offline fine-tuning on the left, retrieval and scored evaluation at inference on the right.", pad: true }
+    ],
     note: "The repository is private while the paper is in progress."
   },
 
