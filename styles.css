@@ -351,6 +351,7 @@ section { padding: 104px 0; }
   font-size: 4rem; line-height: 1;
   filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
 }
+
 .tl-body { padding: 28px 30px 26px; flex: 1; display: flex; flex-direction: column; }
 
 .tl-body h3 {
@@ -612,17 +613,32 @@ footer {
   .cluster-grid > .tl-card,
   .branch { flex-direction: row; }
 
+  /* Every media tile gets the same column whatever it holds, so the tiles
+     line up down the timeline. A photo or diagram needs far more than the
+     168px rail this used to be, which shrank a landscape shot to a stamp. */
   .tl-item > .tl-card > .tl-media,
   .tl-card-head > .tl-media,
   .cluster-grid > .tl-card > .tl-media,
   .branch > .tl-media {
-    width: 168px; height: auto; min-height: 200px;
+    width: auto; flex: 0 0 clamp(260px, 36%, 480px);
+    height: auto; min-height: 200px; padding: 20px;
     border-bottom: 0; border-right: 1px solid var(--line);
   }
+  /* scaled up to sit comfortably in that wider column */
   .tl-item > .tl-card > .tl-media .emoji,
   .tl-card-head > .tl-media .emoji,
   .cluster-grid > .tl-card > .tl-media .emoji,
-  .branch > .tl-media .emoji { font-size: 4.8rem; }
+  .branch > .tl-media .emoji { font-size: 7rem; }
+
+  /* the image runs the full width of that column rather than sitting
+     inset in a fixed box */
+  .tl-item > .tl-card > .tl-media img,
+  .tl-card-head > .tl-media img,
+  .cluster-grid > .tl-card > .tl-media img,
+  .branch > .tl-media img {
+    position: static; top: auto; left: auto;
+    width: 100%; height: auto; max-height: 100%;
+  }
 }
 
 @media (max-width: 1020px) {
@@ -655,13 +671,17 @@ footer {
   .tl-media { height: 180px; }
   .proj > .tl-media { height: 210px; }
 
-  /* the strip turns into a vertical list so it still reads on a phone */
+  /* The strip turns into a vertical list so it still reads on a phone, and
+     the list runs newest first: read downwards, the most recent role is the
+     one you land on, matching the branch list further down the page. The
+     source order stays oldest-first for the horizontal desktop rail. */
   .jr-scroll { overflow: visible; }
-  .jr { grid-auto-flow: row; grid-auto-columns: auto; min-width: 0; }
+  .jr { display: flex; flex-direction: column-reverse; min-width: 0; }
+  /* gradient flipped with the list, so the 2026 end of the rail is at the top */
   .jr::before {
     left: 39px; right: auto; top: 10px; bottom: 10px; width: 2px; height: auto;
     transform: none;
-    background: linear-gradient(180deg,
+    background: linear-gradient(0deg,
       color-mix(in srgb, var(--muted) 55%, transparent) 0 14.286%,
       color-mix(in srgb, var(--t-research) 60%, transparent) 14.286% 57.143%,
       color-mix(in srgb, var(--accent) 70%, transparent) 57.143% 100%);
